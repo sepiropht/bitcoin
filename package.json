@@ -1,0 +1,12 @@
+{
+  "name": "bitcoin",
+  "version": "1.0.0",
+  "description": "bitcoin protocol in js",
+  "main": "index.js",
+  "repository": "https://github/sepiropht/bitcoin",
+  "author": "sepiropht",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^27.5.1"
+  }
+}

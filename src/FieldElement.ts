@@ -12,4 +12,7 @@ export default class FieldElement {
   eq(other: FieldElement): boolean {
     return this.num === other.num && this.num === other.num
   }
+  ne(other: FieldElement): boolean {
+    return this.num !== other.num && this.num !== other.num
+  }
 }

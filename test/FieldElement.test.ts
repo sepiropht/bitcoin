@@ -6,7 +6,10 @@ describe('FieldElement', () => {
   test('2 same FieldElement should be equal', () => {
     expect(a.eq(a)).toBeTruthy()
   })
-  test('2 different FieldElement equal should be equal', () => {
+  test('2 different FieldElement equal should be false', () => {
     expect(a.eq(b)).toBeFalsy()
+  })
+  test('2 different FieldElement should be not equal', () => {
+    expect(a.ne(b)).toBeTruthy()
   })
 })

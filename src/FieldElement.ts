@@ -15,4 +15,10 @@ export default class FieldElement {
   ne(other: FieldElement): boolean {
     return this.num !== other.num && this.num !== other.num
   }
+  add(other: FieldElement): FieldElement {
+    if (this.prime != other.prime) {
+      console.log('Cannot add two numbers in different field')
+    }
+    return new FieldElement((this.num + other.num) % this.prime, this.prime)
+  }
 }

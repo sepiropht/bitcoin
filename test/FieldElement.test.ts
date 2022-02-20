@@ -12,4 +12,10 @@ describe('FieldElement', () => {
   test('2 different FieldElement should be not equal', () => {
     expect(a.ne(b)).toBeTruthy()
   })
+  test('add FieldElement', () => {
+    let a = new FieldElement(7, 13)
+    let b = new FieldElement(12, 13)
+    let c = new FieldElement(6, 13)
+    expect(a.add(b)).toStrictEqual(c)
+  })
 })

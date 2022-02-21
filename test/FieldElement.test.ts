@@ -18,4 +18,10 @@ describe('FieldElement', () => {
     let c = new FieldElement(6, 13)
     expect(a.add(b)).toStrictEqual(c)
   })
+  test('sub FieldElement', () => {
+    let a = new FieldElement(7, 13)
+    let b = new FieldElement(12, 13)
+    let c = new FieldElement(6, 13)
+    expect(c.sub(b)).toStrictEqual(a)
+  })
 })

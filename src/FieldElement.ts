@@ -21,4 +21,16 @@ export default class FieldElement {
     }
     return new FieldElement((this.num + other.num) % this.prime, this.prime)
   }
+  sub(other: FieldElement): FieldElement {
+    if (this.prime != other.prime) {
+      console.log('Cannot sub two numbers in different field')
+    }
+    let num = this.num - other.num
+
+    if (num < 0) {
+      num += this.prime
+    }
+
+    return new FieldElement(num % this.prime, this.prime)
+  }
 }

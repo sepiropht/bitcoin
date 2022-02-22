@@ -33,4 +33,13 @@ export default class FieldElement {
 
     return new FieldElement(num % this.prime, this.prime)
   }
+
+  mul(other: FieldElement): FieldElement {
+    if (this.prime !== other.prime) {
+      console.error('Cannot mutliplicate two numbers in different field')
+    }
+    const num = this.num * other.num
+
+    return new FieldElement(num % this.prime, this.prime)
+  }
 }

@@ -24,4 +24,10 @@ describe('FieldElement', () => {
     let c = new FieldElement(6, 13)
     expect(c.sub(b)).toStrictEqual(a)
   })
+  test('mul FieldElement', () => {
+    let o = new FieldElement(3, 13)
+    let p = new FieldElement(12, 13)
+    let q = new FieldElement(10, 13)
+    expect(o.mul(p)).toStrictEqual(q)
+  })
 })

@@ -42,4 +42,10 @@ export default class FieldElement {
 
     return new FieldElement(num % this.prime, this.prime)
   }
+
+  pow(exponente: number): FieldElement {
+    let exponent = exponente % (this.prime - 1)
+    let num = Math.pow(this.num, exponent) % this.prime
+    return new FieldElement(num, this.prime)
+  }
 }

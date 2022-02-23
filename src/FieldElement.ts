@@ -48,4 +48,14 @@ export default class FieldElement {
     let num = Math.pow(this.num, exponent) % this.prime
     return new FieldElement(num, this.prime)
   }
+
+  div(other: FieldElement): FieldElement {
+    if (this.prime !== other.prime)
+      console.error('Cannot divide two numbers in different Fields')
+
+    const num =
+      (this.num * Math.pow(other.num, this.prime - (2 % this.prime))) %
+      this.prime
+    return new FieldElement(num, this.prime)
+  }
 }

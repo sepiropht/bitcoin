@@ -35,4 +35,10 @@ describe('FieldElement', () => {
     let n = new FieldElement(1, 13)
     expect(m.pow(3)).toStrictEqual(n)
   })
+  test('div FieldElement', () => {
+    let o = new FieldElement(3, 13)
+    let p = new FieldElement(12, 13)
+    let q = new FieldElement(10, 13)
+    expect(q.div(p)).toStrictEqual(o)
+  })
 })
